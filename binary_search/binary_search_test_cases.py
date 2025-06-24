@@ -4,6 +4,8 @@ warnings.filterwarnings("ignore", category=UserWarning)
 from binary_search import *
 from jovian.pythondsa import evaluate_test_case, evaluate_test_cases
 
+from generic_binary_search import *
+
 # Test cases
 tests = []
 
@@ -119,8 +121,12 @@ large_test = {
     'output': 9999998
 }
 
-result, passed, runtime = evaluate_test_case(locate_card_linear, large_test, display=False)
-print(f"Result: {result}\nPassed: {passed}\nExecution Time: {runtime}ms\n\n")
+# result, passed, runtime = evaluate_test_case(locate_card_linear, large_test, display=False)
+# print(f"Result: {result}\nPassed: {passed}\nExecution Time: {runtime}ms\n\n")
+#
+# result, passed, runtime = evaluate_test_case(locate_card, large_test, display=False)
+# print(f"Result: {result}\nPassed: {passed}\nExecution Time: {runtime}ms")
 
-result, passed, runtime = evaluate_test_case(locate_card, large_test, display=False)
-print(f"Result: {result}\nPassed: {passed}\nExecution Time: {runtime}ms")
+
+# Testing the Generic Binary Search Function
+evaluate_test_cases(locate_card_bs, tests)
